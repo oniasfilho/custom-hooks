@@ -28,20 +28,27 @@ function App() {
   return (
     <>
       <section className="counter-wrapper">
-        <div className="counter-session">
+        <output
+          className="counter-session"
+          aria-live="polite"
+          aria-label="Counter value">
           {counter}
-        </div>
+        </output>
         <div className="counter-actions-session">
           <button
+            type="button"
             className="counter-action-btn"
             onClick={() => handleCounterAction("subtract")}
+            aria-label="Decrement"
           >
             -
           </button>
           <button
+            type="button"
             className="counter-action-btn"
             onClick={() => handleCounterAction("add")}
             name="add"
+            aria-label="Increment"
           >
             +
           </button>
